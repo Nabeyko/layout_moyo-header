@@ -4,16 +4,9 @@ body {
   font-style: normal;
   font-size: 12px;
   line-height: 14px;
-  text-transform: uppercase;
   font-weight: 500;
 
-  --header-color: #00ACDC;
-
-  background-color: #444;
-}
-
-.logo {
-  margin: 10px 50px;
+  --header-color: #00acdc;
 }
 
 .header {
@@ -22,37 +15,47 @@ body {
   align-items: center;
   background-color: #fff;
   height: 60px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0 50px;
 }
 
 .nav {
   display: flex;
+  height: 60px;
 }
 
 .nav ul {
   display: flex;
+  align-items: center;
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 20px;
+}
+
+ul li {
+  margin-right: 20px;
 }
 
 a {
+  display: flex;
+  height: 60px;
+  align-items: center;
   text-decoration: none;
+  text-transform: uppercase;
   color: #000;
+}
+
+a:hover {
+  color: var(--header-color);
 }
 
 .apple {
   position: relative;
   color: var(--header-color);
-  height: 60px;
 }
 
-.is-active{
-  color: var(--header-color);
-}
-
-li:last-child a {
-  margin-right: 50px;
+li:last-child {
+  margin-right: 0;
 }
 
 .apple::after {
