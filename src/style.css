@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, Arial, sans-serif;
   font-style: normal;
   font-size: 12px;
   line-height: 14px;
@@ -14,14 +14,12 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
-  height: 60px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 0 50px;
 }
 
 .nav {
   display: flex;
-  height: 60px;
 }
 
 .nav ul {
@@ -32,11 +30,11 @@ body {
   margin: 0;
 }
 
-ul li {
+ul .nav__item {
   margin-right: 20px;
 }
 
-a {
+.nav__link {
   display: flex;
   height: 60px;
   align-items: center;
@@ -45,27 +43,27 @@ a {
   color: #000;
 }
 
-a:hover {
+.nav__link:hover {
   color: var(--header-color);
 }
 
-.apple {
+.is-active {
   position: relative;
   color: var(--header-color);
 }
 
-li:last-child {
+.nav__item:last-child {
   margin-right: 0;
 }
 
-.apple::after {
+.is-active::after {
   content: '';
   position: absolute;
   width: 37px;
   height: 4px;
   bottom: 0;
-  left: 0;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: var(--header-color);
   border-radius: 8px;
 }
